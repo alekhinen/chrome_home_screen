@@ -40,14 +40,20 @@ var Requests = {
     xhr.onreadystatechange = function() {
       if (xhr.readyState == 4) {
         data = xhr.responseText;
-        result = JSON.parse( data );
+        result = JSON.parse(data);
+        console.log(result);
+
         var currentTemperature = Math.round(result.currently.temperature);
+        var currentSummary = result.currently.summary;
         var currentHigh = Math.round(result.daily.data[0].apparentTemperatureMax);
         var currentLow = Math.round(result.daily.data[0].apparentTemperatureMin);
-        console.log(result);
+        var currentAlerts = result.alerts;
+
         $('#place-temperature').html(currentTemperature);
         $('#place-high-temp').html(currentHigh);
         $('#place-low-temp').html(currentLow);
+        $('#currently-summary').html(currentSummary);
+        $('#alert-title').html(currentAlerts.length + ' Weather Alerts');
       }
     }
     xhr.send();

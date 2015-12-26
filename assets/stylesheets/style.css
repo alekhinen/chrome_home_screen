@@ -24,7 +24,7 @@ h1 {
   font-size: 90px;
   line-height: 90px;
   font-weight: 200;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .daily-temp {
@@ -112,4 +112,12 @@ h5 {
   float: left;
   margin-right: 3px;
   font-size: 9px;
+}
+
+.clear {
+  clear: both;
+}
+
+#currently-summary {
+  max-width: 230px;
 }
