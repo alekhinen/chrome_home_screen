@@ -1,0 +1,27 @@
+.clear-day, .clear-night, .rain, .snow, .sleet, .wind, .fog, .cloudy,
+.partly-cloudy-day, .partly-cloudy-night {
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.1em;
+}
+
+
+.clear-day:before   { content: "\f1e4"; }
+.clear-night:before { content: "\f1b2"; }
+.rain:before   { content: "\f2b7"; }
+.snow:before   { content: "\f309"; }
+.sleet:before  { content: "\f1cf"; }
+.wind:before   { content: "\f1cf"; }
+.fog:before    { content: "\f1cf"; }
+.cloudy:before { content: "\f12b"; }
+.partly-cloudy-day:before   { content: "\f1bc"; }
+.partly-cloudy-night:before { content: "\f308"; }

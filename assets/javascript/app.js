@@ -45,6 +45,7 @@ var Requests = {
 
         var currentTemperature = Math.round(result.currently.temperature);
         var currentSummary = result.currently.summary;
+        var currentIcon = result.currently.icon;
         var currentHigh = Math.round(result.daily.data[0].apparentTemperatureMax);
         var currentLow = Math.round(result.daily.data[0].apparentTemperatureMin);
         var currentAlerts = result.alerts;
@@ -52,7 +53,8 @@ var Requests = {
         $('#place-temperature').html(currentTemperature);
         $('#place-high-temp').html(currentHigh);
         $('#place-low-temp').html(currentLow);
-        $('#currently-summary').html(currentSummary);
+        var icon = '<span class="icon ' + currentIcon + '"> </span>';
+        $('#currently-summary').html(icon + ' ' + currentSummary);
         $('#alert-title').html(currentAlerts.length + ' Weather Alerts');
       }
     }
