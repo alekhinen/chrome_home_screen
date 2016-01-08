@@ -76,6 +76,7 @@ var Requests = {
         console.log(randomPhoto);
         $('#flickr-image-container').html('<img class="bg-cover" src="https://farm' + randomPhoto.farm + '.staticflickr.com/' + randomPhoto.server + '/' + randomPhoto.id + '_' + randomPhoto.secret + '_z.jpg"/>');
         $('#flickr-image-title').html(randomPhoto.title);
+        $('#flickr-image-owner').html('by ' + randomPhoto.ownername);
         // URL: 'https://www.flickr.com/photos/' + this.owner + '/' + this.id;
         $('#flickr-image-url').html('<a href="https://www.flickr.com/photos/' + randomPhoto.owner + '/' + randomPhoto.id + '" target="_blank"></a>')
       }
